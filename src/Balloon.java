@@ -13,14 +13,14 @@ public class Balloon {
         return (Math.PI *Math.pow(r,2));
     }
 
-    public double getDis(Balloon other){
+    public double getDistance(Balloon other){
         double d1 = Math.pow(other.x - this.x, 2);
         double d2 = Math.pow(other.y - this.y, 2);
         return (Math.sqrt(d1+d2));
     }
 
     public double getInter(Balloon other) {
-        double d = getDis(other);
+        double d = getDistance(other);
 
         if (d >= this.r + other.r) {
             return 0.0;
